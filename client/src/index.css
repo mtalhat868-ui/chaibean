@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Poppins", sans-serif;
+  --color-espresso: #24140e;
+  --color-roast: #4a2c1d;
+  --color-caramel: #c68b59;
+  --color-gold: #d4a24a;
+  --color-cream: #f6efe4;
+  --color-latte: #ead9c2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-espresso);
+}
+
+.field {
+  @apply mt-2 w-full rounded-2xl border border-gold/25 bg-cream px-4 py-3 text-espresso outline-none transition placeholder:text-roast/40 focus:border-gold focus:ring-2 focus:ring-gold/30 dark:bg-espresso dark:text-cream;
+}

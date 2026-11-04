@@ -1,16 +1,25 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ChaiBean
 
-Currently, two official plugins are available:
+A full stack cafe website built with React, Express, Node.js and MongoDB.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Components
 
-## React Compiler
+### Navbar
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A floating, glass style navigation bar fixed at the top of every page.
 
-## Expanding the ESLint configuration
+**What it uses:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. `useState`: opens and closes the mobile menu
+2. `NavLink`: page links that highlight the active page
+3. `Link`: the logo link back to the home page
+4. `map()`: loops over the links array to build every link
+5. `motion.header`: slide down animation when the page loads
+6. `motion.div`: fade in animation for the mobile menu
+7. `lucide-react` icons: Coffee, Menu, X, Sun and Moon
+8. Tailwind CSS: rounded pill shape, blur background, responsive classes
+9. Conditional rendering: shows the Sun or Moon icon, and the mobile menu only when open
+10. Props: `dark` and `toggleDark`, passed in from Layout
+
+**Responsive:** links are visible on desktop and move into a menu button on mobile.
